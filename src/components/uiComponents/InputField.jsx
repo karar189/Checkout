@@ -11,6 +11,7 @@ const InputField = ({
   const placeholderParts = placeholder.split("*");
   const placeholderText = placeholderParts[0].trim();
   const placeholderAsterisk = placeholderParts.length > 1 ? "*" : "";
+  const iconSpacing = icon ? "pl-7" : "";
 
   return (
     <div
@@ -25,7 +26,9 @@ const InputField = ({
         required
       />
       {value === "" && (
-        <div className="absolute left-4 top-0 bottom-0 flex items-center pointer-events-none">
+        <div
+          className={`absolute left-4 top-0 bottom-0 flex items-center pointer-events-none ${iconSpacing}`}
+        >
           <span className="text-gray-500">{placeholderText}</span>
           <span className="text-red-500">{placeholderAsterisk}</span>
         </div>

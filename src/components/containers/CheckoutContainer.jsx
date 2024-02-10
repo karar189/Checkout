@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/style";
 import { BorderBox, InputField, Button } from "../uiComponents/index";
 import card from "../../assets/card.png";
@@ -12,6 +12,17 @@ import radio2 from "../../assets/radio2.png";
 import info3 from "../../assets/info3.png";
 
 const CheckoutContainer = () => {
+  const [formData, setFormData] = useState({
+    nameOnCard: "",
+    cardNumber: "",
+    expiryDate: "",
+    cvv: "",
+  });
+
+  const handleChange = (event, field) => {
+    setFormData({ ...formData, [field]: event.target.value });
+  };
+
   return (
     <>
       <div
@@ -47,19 +58,36 @@ const CheckoutContainer = () => {
                   className={`flex my-2 ${styles.flexBetween} flex-col md:flex-row`}
                 >
                   <InputField
-                    placeholder="Name on card"
-                    className={`md:mr-6 mb-4`}
+                    placeholder="Name on card*"
+                    className={`md:mr-6 mb-4 md:mb-0`}
+                    value={formData.nameOnCard}
+                    onChange={(e) => handleChange(e, "nameOnCard")}
+                    required={true}
                   />
-                  <InputField placeholder="Card Number" icon={card} />
+                  <InputField
+                    placeholder="Card Number*"
+                    icon={card}
+                    value={formData.cardNumber}
+                    onChange={(e) => handleChange(e, "cardNumber")}
+                    required={true}
+                  />
                 </div>
                 <div
                   className={`flex my-6 ${styles.flexBetween} flex-col md:flex-row`}
                 >
                   <InputField
-                    placeholder="Expiry Date"
-                    className={`md:mr-6 mb-4`}
+                    placeholder="Expiry Date*"
+                    value={formData.expiryDate}
+                    onChange={(e) => handleChange(e, "expiryDate")}
+                    required={true}
+                    className={`md:mr-6 mb-4 md:mb-0`}
                   />
-                  <InputField placeholder="CVV/CVC" icon="" />
+                  <InputField
+                    placeholder="CVV/CVC*"
+                    value={formData.cvv}
+                    onChange={(e) => handleChange(e, "cvv")}
+                    required={true}
+                  />
                 </div>
               </div>
               <div className="total">
