@@ -3,7 +3,7 @@ import styles from "../../styles/style";
 import { BorderBox, InputField, Button } from "../uiComponents/index";
 import card from "../../assets/card.png";
 import radio from "../../assets/Radio.png";
-import logo from "../../assets/logos.png";
+import logo from "../../assets/Logos.png";
 import piggy2 from "../../assets/piggy2.png";
 import info from "../../assets/info2.png";
 import lock from "../../assets/Lock.png";
