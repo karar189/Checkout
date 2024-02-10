@@ -13,9 +13,9 @@ const PaymentContainer = () => {
   return (
     <>
       <div
-        className={`${styles.paddingX} ${styles.paddingY} ${styles.marginX} ${styles.flexBetween} `}
+        className={`${styles.paddingX} ${styles.paddingY} ${styles.marginX} flex md:flex-row flex-col-reverse `}
       >
-        <div className="left w-2/3 ">
+        <div className="left md:w-2/3 ">
           <p className={`${styles.heading1} mb-16`}>Confirm & pay</p>
           <BorderBox className={`border-[#D3D4DB]`}>
             <div className="py-2">
@@ -33,7 +33,7 @@ const PaymentContainer = () => {
             <UserForm />
           </div>
         </div>
-        <div className="right w-1/3 pl-6">
+        <div className="right md:w-1/3 md:pl-6">
           <BorderBox className={`rounded-3xl border-[#D3D4DB]`}>
             <div className="ImageContainer">
               <RightSlider />

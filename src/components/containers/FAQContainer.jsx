@@ -34,7 +34,6 @@ const faqData = [
 ];
 
 const FAQContainer = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [openId, setOpenId] = useState(null);
   const contentRef = useRef({});
 

@@ -44,13 +44,13 @@ const UserForm = () => {
             onChange={(e) => handleChange(e, "fullName")}
             placeholder="Full Name*"
             required={true}
+            className={`md:mb-0 mb-4`}
           />
-          <div className={`${styles.flexBetween} my-8`}>
+          <div className={`flex md:flex-row flex-col md:my-8 `}>
             <SelectField
               placeholder="Select Country Code*"
               icon={globe}
               options={countryOptions}
-              className="mr"
             />
             <InputField
               value={formData.phoneNumber}
@@ -59,16 +59,16 @@ const UserForm = () => {
               onChange={(e) => handleChange(e, "phoneNumber")}
               placeholder="Phone number*"
               required={true}
-              className="ml-6"
+              className="md:ml-6 md:my-0 my-4"
             />
           </div>
-          <div className={`${styles.flexBetween}`}>
+          <div className={`${styles.flexBetween} md:flex-row flex-col`}>
             <InputField
               value={formData.email}
               onChange={(e) => handleChange(e, "email")}
               placeholder="Email*"
               required={true}
-              className="mr-6"
+              className="mr-6 md:mb-0 mb-4"
             />
             <InputField
               value={formData.confirmEmail}
@@ -89,11 +89,13 @@ const UserForm = () => {
         </div>
 
         <div className="form">
-          <div className={`${styles.flexBetween} mb-8`}>
+          <div
+            className={`${styles.flexBetween} md:flex-row flex-col md:mb-8 mb-4`}
+          >
             <InputField
               placeholder="Other Input*"
               required={true}
-              className={`mr-6`}
+              className={`md:mr-6 md:mb-0 mb-4`}
               value={formData.otherInput}
               onChange={(e) => handleChange(e, "otherInput")}
             />
