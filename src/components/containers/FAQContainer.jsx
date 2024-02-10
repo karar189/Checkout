@@ -39,31 +39,39 @@ const FAQContainer = () => {
 
   const toggleFAQ = (id) => {
     if (openId === id) {
-      setOpenId(null); // If clicked again, close it
+      setOpenId(null);
     } else {
-      setOpenId(id); // Else, open the clicked one
+      setOpenId(id);
     }
   };
   return (
     <>
       <div
-        className={`${styles.paddingX} ${styles.paddingY} ${styles.marginX} ${styles.flexBetween} `}
+        className={`${styles.paddingX} ${styles.paddingY} ${styles.marginX} ${styles.flexBetween} md:flex-row flex-col`}
       >
-        <div className="FaqBox w-[40%] pr-20">
+        <div className="FaqBox md:w-[40%] md:pr-20">
           <p className={`${styles.subheading}`}>Frequently asked questions</p>
           <p className={`${styles.subheading2}`}>
             {" "}
             Here are some of our most asked questions.{" "}
           </p>
-          <div className="mt-10 flex justify-between pl-4">
-            <p className={`${styles.subheading2} font-semibold text-[#1C2024]`}>
-              Still Need Help? <br /> We're Here For You <br />{" "}
-              <Button iconSrc="" buttonText="Chat With Us" className={`mt-2`} />
-            </p>
-            <img src={support} alt="image" className="w-28 h-auto" />
+          <div className="hidden md:block">
+            <div className="mt-10 flex justify-between pl-4 ">
+              <p
+                className={`${styles.subheading2} font-semibold text-[#1C2024]`}
+              >
+                Still Need Help? <br /> We're Here For You <br />{" "}
+                <Button
+                  iconSrc=""
+                  buttonText="Chat With Us"
+                  className={`mt-2`}
+                />
+              </p>
+              <img src={support} alt="image" className="w-28 h-auto" />
+            </div>
           </div>
         </div>
-        <div className="FaqQuestion w-[70%]">
+        <div className="FaqQuestion md:w-[70%] md:mt-0 mt-8">
           {faqData.map((faq) => (
             <BorderBox
               key={faq.id}
@@ -83,7 +91,7 @@ const FAQContainer = () => {
                   }}
                 />
                 <span
-                  className={`ml-4 ${styles.subheading2} font-semibold text-[#161719]`}
+                  className={`ml-4 ${styles.subheading2} text-left font-semibold text-[#161719]`}
                 >
                   {faq.question}
                 </span>
@@ -103,6 +111,15 @@ const FAQContainer = () => {
               </div>
             </BorderBox>
           ))}
+        </div>
+        <div className="block md:hidden">
+          <div className=" flex justify-between mt-4 mb-6">
+            <p className={`${styles.subheading2} font-semibold text-[#1C2024]`}>
+              Still Need Help? <br /> We're Here For You <br />{" "}
+              <Button iconSrc="" buttonText="Chat With Us" className={`mt-3`} />
+            </p>
+            <img src={support} alt="image" className="w-32 h-auto" />
+          </div>
         </div>
       </div>
     </>

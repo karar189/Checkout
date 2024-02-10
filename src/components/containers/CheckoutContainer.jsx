@@ -150,7 +150,7 @@ const CheckoutContainer = () => {
               <img src={radio2} alt="img" />
             </div>
           </BorderBox>
-          <div className={`mt-20 mb-24`}>
+          <div className={`mt-20 md:mb-24 mb-10`}>
             <p className={`${styles.subheading} mb-4`}>Total Payable: $XXX</p>
             <BorderBox className={`border-[#D3D4DB]`}>
               <div className="flex flex-between">
