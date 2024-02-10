@@ -4,3 +4,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.transition-max-height {
+  transition: max-height 0.7s ease-in-out;
+}
+
+/* Add this to your CSS file */
+.transition-transform {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Add this to your CSS file */
+.transition-all {
+  transition: all 0.5s ease-in-out;
+}

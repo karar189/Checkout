@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "../../styles/style";
 import { BorderBox, Button } from "../uiComponents/index";
+import support from "../../assets/support.svg";
+import plusIcon from "../../assets/plus.png";
+import minusIcon from "../../assets/minus.png"; // you'll need an icon for minus
 
 const faqData = [
   {
@@ -33,6 +36,7 @@ const faqData = [
 const FAQContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openId, setOpenId] = useState(null);
+  const contentRef = useRef({});
 
   const toggleFAQ = (id) => {
     if (openId === id) {
@@ -48,31 +52,53 @@ const FAQContainer = () => {
       >
         <div className="FaqBox w-[40%] pr-20">
           <p className={`${styles.subheading}`}>Frequently asked questions</p>
-          <p className={`${styles.paragraph2}`}>
+          <p className={`${styles.subheading2}`}>
             {" "}
             Here are some of our most asked questions.{" "}
           </p>
-          <div className="mt-10 flex justify-between">
-            <p className={`${styles.paragraph}`}>
+          <div className="mt-10 flex justify-between pl-4">
+            <p className={`${styles.subheading2} font-semibold text-[#1C2024]`}>
               Still Need Help? <br /> We're Here For You <br />{" "}
               <Button iconSrc="" buttonText="Chat With Us" className={`mt-2`} />
             </p>
-            <img src="" alt="image" srcset="" />
+            <img src={support} alt="image" className="w-28 h-auto" />
           </div>
         </div>
         <div className="FaqQuestion w-[70%]">
           {faqData.map((faq) => (
-            <BorderBox key={faq.id} className={`mt-4`}>
-              <div>
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="flex items-center w-full"
+            <BorderBox key={faq.id} className="mb-4 overflow-hidden">
+              <button
+                onClick={() => toggleFAQ(faq.id)}
+                className="flex items-center  w-full focus:outline-none"
+              >
+                <img
+                  src={openId === faq.id ? minusIcon : plusIcon}
+                  alt={openId === faq.id ? "Collapse" : "Expand"}
+                  className="transition-transform duration-500"
+                  style={{
+                    transform:
+                      openId === faq.id ? "rotate(180deg)" : "rotate(0deg)",
+                  }}
+                />
+                <span
+                  className={`ml-4 ${styles.subheading2} font-semibold text-[#1C2024]`}
                 >
-                  <span>{openId === faq.id ? "-" : "+"}</span>
-                  <span className="ml-4">{faq.question}</span>
-                </button>
+                  {faq.question}
+                </span>
+              </button>
+              <div
+                ref={(el) => (contentRef.current[faq.id] = el)}
+                className={`${styles.paragraph2} ml-8 transition-all duration-500 ease-in-out`}
+                style={{
+                  maxHeight:
+                    openId === faq.id
+                      ? `${contentRef.current[faq.id]?.scrollHeight}px`
+                      : "0",
+                  opacity: openId === faq.id ? "1" : "0",
+                }}
+              >
+                {faq.answer}
               </div>
-              {openId === faq.id && <div className="ml-6">{faq.answer}</div>}
             </BorderBox>
           ))}
         </div>
