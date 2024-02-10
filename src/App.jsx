@@ -9,9 +9,9 @@ const App = () => {
         {" "}
         <div className="w-[1500px]">
           {" "}
-          {/* <Header /> */}
+          <Header />
           <PaymentPage />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
     </>
