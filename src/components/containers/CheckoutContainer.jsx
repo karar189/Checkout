@@ -9,7 +9,7 @@ import info from "../../assets/info2.png";
 import lock from "../../assets/Lock.png";
 import gpay from "../../assets/gpay.png";
 import radio2 from "../../assets/radio2.png";
-import info3 from "../../assets/info3.png";
+import info3 from "../../assets/Info3.png";
 import piggy from "../../assets/piggy.png";
 
 const CheckoutContainer = () => {
