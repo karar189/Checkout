@@ -18,102 +18,106 @@ const CheckoutContainer = () => {
         className={`${styles.paddingX} ${styles.marginX} ${styles.flexBetween} `}
       >
         <div className="left w-2/3 pr-10">
-          <div className={`my-8`}>
+          <div className={`mb-8`}>
             <p className={`${styles.subheading}`}>
               Select your mode of payment
             </p>
-            <p className={`${styles.subheading2}`}>
+            <p className={`${styles.subheading2} mt-3`}>
               Payments with Tickete are secure and encrypted.
             </p>
           </div>
-          <BorderBox className={`border-[#1C2024]`}>
-            <div className={`${styles.flexBetween}`}>
-              <p
-                className={`${styles.subheading2} font-semibold text-[#1c2024] flex`}
-              >
-                <span>
-                  <img src={card} alt="" className="mt-[2px]" />
-                </span>
-                Credit & debit card
-              </p>
-              <img src={radio} alt="icon" />
-            </div>
-            <div className="flex mt-3">
-              <img src={logo} className="mr-2" alt="icon1" />
-            </div>
-            <div className="form">
-              <div className={`flex my-2 ${styles.flexBetween}`}>
-                <InputField placeholder="Name on card" className={`mr-2`} />
-                <InputField placeholder="Card Number" icon={card} />
-              </div>
-              <div className={`flex my-2 ${styles.flexBetween}`}>
-                <InputField placeholder="Expiry Date" className={`mr-2`} />
-                <InputField placeholder="CVV/CVC" icon="" />
-              </div>
-            </div>
-            <div className="total">
-              <div
-                className={`${styles.subheading} ${styles.flexBetween} mt-4 w-full`}
-              >
-                <div
-                  className={`${styles.subheading2} font-semibold  text-[#1C2024]`}
+          <BorderBox className={`border-[#202327]`}>
+            <div className="p-2">
+              <div className={`${styles.flexBetween}`}>
+                <p
+                  className={`${styles.subheading2} font-semibold text-[#040505] flex`}
                 >
-                  <p> Total payable $XXX </p>
-                </div>
-                <div
-                  className={`${styles.paragraph4} font-semibold flex items-center px-3 rounded-3xl bg-[#299764]`}
-                >
-                  <span className="mr-1">
-                    <img src={piggy2} alt="" />
+                  <span>
+                    <img src={card} alt="" className="mt-[2px] text-b" />
                   </span>
-                  <span className="text-white">You saved $300</span>
+                  Credit & debit card
+                </p>
+                <img src={radio} alt="icon" />
+              </div>
+              <div className="flex mt-8">
+                <img src={logo} className="mr-2" alt="icon1" />
+              </div>
+              <div className="form mt-8">
+                <div className={`flex my-2 ${styles.flexBetween}`}>
+                  <InputField placeholder="Name on card" className={`mr-6`} />
+                  <InputField placeholder="Card Number" icon={card} />
+                </div>
+                <div className={`flex my-6 ${styles.flexBetween}`}>
+                  <InputField placeholder="Expiry Date" className={`mr-6`} />
+                  <InputField placeholder="CVV/CVC" icon="" />
                 </div>
               </div>
-              <u className={`${styles.paragraph4} font-semibold flex`}>
-                You will be charged in AED{" "}
-                <span className="mt-[1.5px] ml-1">
-                  <img src={info} alt="icon" className="" />
-                </span>
-              </u>
-            </div>
-            <div className="flex items-start mt-6">
-              <input
-                type="checkbox"
-                id="termsCheckbox"
-                name="termsCheckbox"
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 "
-              />
-              <label
-                htmlFor="termsCheckbox"
-                className="ml-2 text-xs text-gray-500"
-              >
-                By clicking “confirm & pay”, you agree to Tickete’s
-                <a
-                  href="/terms"
-                  className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+              <div className="total">
+                <div
+                  className={`${styles.subheading} ${styles.flexBetween} mt-8 w-full`}
                 >
-                  {" "}
-                  general terms and conditions
-                </a>
-                and
-                <a
-                  href="/cancellation-policy"
-                  className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                  <div
+                    className={`${styles.subheading2} font-semibold  text-[#151617]`}
+                  >
+                    <p> Total payable: $XXX </p>
+                  </div>
+                  <div
+                    className={`${styles.paragraph4} mt-4 font-semibold flex items-center px-3 rounded-3xl bg-[#299764]`}
+                  >
+                    <span className="mr-1">
+                      <img src={piggy2} alt="" />
+                    </span>
+                    <span className="text-white">You saved $300</span>
+                  </div>
+                </div>
+                <u
+                  className={`${styles.paragraph4} font-semibold opacity-80 flex`}
                 >
-                  {" "}
-                  cancellation policy
-                </a>
-                .
-              </label>
-            </div>
-            <div className="w-56 mt-2">
-              <Button iconSrc={lock} buttonText="Confirm & Pay" />
+                  You will be charged in AED{" "}
+                  <span className="mt-[1.5px] ml-1">
+                    <img src={info} alt="icon" className="" />
+                  </span>
+                </u>
+              </div>
+              <div className="flex items-start my-6">
+                <input
+                  type="checkbox"
+                  id="termsCheckbox"
+                  name="termsCheckbox"
+                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 "
+                />
+                <label
+                  htmlFor="termsCheckbox"
+                  className="ml-2 text-xs text-gray-500"
+                >
+                  By clicking “confirm & pay”, you agree to Tickete’s
+                  <a
+                    href="/terms"
+                    className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                  >
+                    {" "}
+                    general terms and conditions
+                  </a>
+                  and
+                  <a
+                    href="/cancellation-policy"
+                    className="text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                  >
+                    {" "}
+                    cancellation policy
+                  </a>
+                  .
+                </label>
+              </div>
+              <div className="w-56 mt-2">
+                <Button iconSrc={lock} buttonText="Confirm & Pay" />
+              </div>
             </div>
           </BorderBox>
-          <BorderBox className={`mt-4`}>
-            <div className={`${styles.flexBetween}`}>
+          <BorderBox className={`mt-5 border-[#D3D4DB]`}>
+            <div className={`${styles.flexBetween} py-2`}>
               <div className={`flex`}>
-                <img src={gpay} alt="img" className="w-10" />
+                <img src={gpay} alt="img" className="w-12" />
                 <p
                   className={`${styles.subheading2} ml-2 font-semibold text-[#8B8D98]`}
                 >
@@ -123,10 +127,10 @@ const CheckoutContainer = () => {
               <img src={radio2} alt="img" />
             </div>
           </BorderBox>
-          <BorderBox className={`mt-4`}>
-            <div className={`${styles.flexBetween}`}>
+          <BorderBox className={`mt-5 border-[#D3D4DB]`}>
+            <div className={`${styles.flexBetween} py-2`}>
               <div className={`flex`}>
-                <img src={gpay} alt="img" className="w-10" />
+                <img src={gpay} alt="img" className="w-12" />
                 <p
                   className={`${styles.subheading2} ml-2 font-semibold text-[#8B8D98]`}
                 >
@@ -136,9 +140,9 @@ const CheckoutContainer = () => {
               <img src={radio2} alt="img" />
             </div>
           </BorderBox>
-          <div className={`my-8`}>
+          <div className={`mt-20 mb-24`}>
             <p className={`${styles.subheading} mb-4`}>Total Payable: $XXX</p>
-            <BorderBox>
+            <BorderBox className={`border-[#D3D4DB]`}>
               <div className="flex flex-between">
                 <div className="mr-2 mt-1">
                   <img src={info3} alt="img" />

@@ -7,10 +7,11 @@ import clock from "../../../assets/clock.png";
 import user from "../../../assets/user.png";
 import plus from "../../../assets/plus.png";
 import piggy from "../../../assets/piggy.png";
+import minus from "../../../assets/minus.png";
 
 const InfoItem = ({ icon, text }) => (
-  <div className={`${styles.paragraph} flex items-center font-semibold`}>
-    <img src={icon} alt="Icon" className="w-4 h-4 mr-2" />
+  <div className={`${styles.paragraph} flex items-center font-semibold `}>
+    <img src={icon} alt="Icon" className="w-4 h-4 mr-3" />
     <span>{text}</span>
   </div>
 );
@@ -41,21 +42,24 @@ const RightDetails = () => {
         </div>
       </div>
       <div
-        className={`${styles.subheading2} mb-1 font-semibold text-[#1C2024]`}
+        className={`${styles.subheading2} mb-1 font-semibold text-[#1c1d1f]`}
       >
         Amsterdam open boat canal cruise - Live Guide - from Anne Frank House
       </div>
 
       <div className={`${styles.flexBetween} my-4 flex-col `}>
         <InfoItem {...ticketTypeInfo} />
+        <br />
         <InfoItem {...dateInfo} />
-        <div className={`${styles.paragraph4} flex items-center ml-6`}>
+        <div className={`${styles.paragraph4} flex items-center ml-7`}>
           <span>Date</span>
         </div>
+        <br />
         <InfoItem {...timeInfo} />
-        <div className={`${styles.paragraph4} flex items-center ml-6`}>
+        <div className={`${styles.paragraph4} flex items-center ml-7`}>
           <span>Operating Hours</span>
         </div>
+        <br />
         <InfoItem {...guestInfo} />
       </div>
       <div class="border-t border-[#60646C] border-dashed w-full"></div>
@@ -63,11 +67,11 @@ const RightDetails = () => {
       <div className="my-4 w-full">
         <button
           onClick={togglePaymentSummary}
-          className={`w-full flex justify-between ${styles.paragraph2} font-semibold text-[#60646C]`}
+          className={`w-full flex justify-between ${styles.paragraph2} font-semibold text-[#60646cc8]`}
         >
           <u className="">View Payment Summary</u>
-          {/* <div>{showPaymentSummary ? "−" : "+"}</div> */}
-          <img src={showPaymentSummary ? "-" : plus} alt="" />
+
+          <img src={showPaymentSummary ? minus : plus} alt="" />
         </button>
         {showPaymentSummary && (
           <div
@@ -84,19 +88,17 @@ const RightDetails = () => {
       </div>
       <div class="border-t border-[#60646C] border opacity-25 w-full"></div>
       <div
-        className={`${styles.subheading2} font-semibold ${styles.flexBetween} my-4 w-full text-[#1C2024]`}
+        className={`${styles.subheading2} font-semibold ${styles.flexBetween} mt-6 w-full text-[#1d1e20]`}
       >
         <p> Total payable </p>
         <p className=""> $XXX</p>
       </div>
 
-      <div
-        className={`${styles.paragraph4} font-semibold flex items-center text-[#299764]`}
-      >
+      <div className={`${styles.paragraph4} font-bold flex items-center my-6`}>
         <span className="mr-1">
           <img src={piggy} alt="" />
         </span>
-        <span>You saved $300</span>
+        <span className="text-[#299764]">You saved $300</span>
       </div>
     </div>
   );

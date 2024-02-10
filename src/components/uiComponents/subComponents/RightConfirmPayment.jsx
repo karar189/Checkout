@@ -7,14 +7,14 @@ import lock from "../../../assets/Lock.png";
 const RightConfirmPayment = () => {
   return (
     <div className="space-y-2">
-      <u className={`${styles.paragraph4} font-semibold flex`}>
+      <u className={`${styles.paragraph4} font-semibold flex mb-6`}>
         You will be charged in AED{" "}
         <span className="mt-[1.5px] ml-1">
           <img src={info} alt="icon" className="" />
         </span>
       </u>
 
-      <div className="flex items-start">
+      <div className="flex  ">
         <input
           type="checkbox"
           id="termsCheckbox"
@@ -41,7 +41,9 @@ const RightConfirmPayment = () => {
           .
         </label>
       </div>
-      <Button iconSrc={lock} buttonText="Confirm & Pay" className=" " />
+      <div className="pt-2">
+        <Button iconSrc={lock} buttonText="Confirm & Pay" />
+      </div>
     </div>
   );
 };

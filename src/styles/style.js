@@ -14,8 +14,8 @@ const styles = {
   flexEnd: "flex justify-end items-end",
   flexBetween: "flex justify-between",
 
-  paddingX: "px-4 sm:px-8 md:px-16",
-  paddingY: "py-4 sm:py-4 md:py-16",
+  paddingX: "px-4 sm:px-8 md:px-14",
+  paddingY: "py-4 sm:py-4 md:py-14",
   paddingL: "pl-4 sm:pl-8 md:pl-16",
   padding: "p-4 sm:p-8 md:p-16",
 

@@ -10,7 +10,7 @@ const InputField = ({
 }) => {
   return (
     <div
-      className={`flex items-center border border-slate-300 w-full rounded-xl overflow-hidden 
+      className={`flex items-center border border-stone-400 w-full rounded-xl overflow-hidden 
       ${icon ? "pl-2" : "px-4 "} ${className}`}
     >
       {icon && <img src={icon} />}
@@ -19,7 +19,7 @@ const InputField = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="outline-none  py-3"
+        className="outline-none  py-[13.5px]"
       />
     </div>
   );

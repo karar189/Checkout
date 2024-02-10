@@ -66,7 +66,10 @@ const FAQContainer = () => {
         </div>
         <div className="FaqQuestion w-[70%]">
           {faqData.map((faq) => (
-            <BorderBox key={faq.id} className="mb-4 overflow-hidden">
+            <BorderBox
+              key={faq.id}
+              className="mb-4 overflow-hidden border-stone-400"
+            >
               <button
                 onClick={() => toggleFAQ(faq.id)}
                 className="flex items-center  w-full focus:outline-none"
@@ -81,7 +84,7 @@ const FAQContainer = () => {
                   }}
                 />
                 <span
-                  className={`ml-4 ${styles.subheading2} font-semibold text-[#1C2024]`}
+                  className={`ml-4 ${styles.subheading2} font-semibold text-[#161719]`}
                 >
                   {faq.question}
                 </span>
