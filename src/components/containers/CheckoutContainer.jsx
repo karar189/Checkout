@@ -17,7 +17,7 @@ const CheckoutContainer = () => {
       <div
         className={`${styles.paddingX} ${styles.marginX} ${styles.flexBetween} `}
       >
-        <div className="left w-2/3 pr-10">
+        <div className="left md:w-2/3 md:pr-10">
           <div className={`mb-8`}>
             <p className={`${styles.subheading}`}>
               Select your mode of payment
@@ -43,26 +43,36 @@ const CheckoutContainer = () => {
                 <img src={logo} className="mr-2" alt="icon1" />
               </div>
               <div className="form mt-8">
-                <div className={`flex my-2 ${styles.flexBetween}`}>
-                  <InputField placeholder="Name on card" className={`mr-6`} />
+                <div
+                  className={`flex my-2 ${styles.flexBetween} flex-col md:flex-row`}
+                >
+                  <InputField
+                    placeholder="Name on card"
+                    className={`md:mr-6 mb-4`}
+                  />
                   <InputField placeholder="Card Number" icon={card} />
                 </div>
-                <div className={`flex my-6 ${styles.flexBetween}`}>
-                  <InputField placeholder="Expiry Date" className={`mr-6`} />
+                <div
+                  className={`flex my-6 ${styles.flexBetween} flex-col md:flex-row`}
+                >
+                  <InputField
+                    placeholder="Expiry Date"
+                    className={`md:mr-6 mb-4`}
+                  />
                   <InputField placeholder="CVV/CVC" icon="" />
                 </div>
               </div>
               <div className="total">
                 <div
-                  className={`${styles.subheading} ${styles.flexBetween} mt-8 w-full`}
+                  className={`${styles.subheading} ${styles.flexBetween} md:flex-row flex-col-reverse md:mt-8 w-full`}
                 >
                   <div
-                    className={`${styles.subheading2} font-semibold  text-[#151617]`}
+                    className={`${styles.subheading2} font-semibold md:my-0 my-4  text-[#151617]`}
                   >
                     <p> Total payable: $XXX </p>
                   </div>
                   <div
-                    className={`${styles.paragraph4} mt-4 font-semibold flex items-center px-3 rounded-3xl bg-[#299764]`}
+                    className={`${styles.paragraph4} md:mt-4 font-semibold flex items-center md:py-1 py-1 px-2 md:w-[20%] w-[54%] md:px-3 rounded-3xl bg-[#299764]`}
                   >
                     <span className="mr-1">
                       <img src={piggy2} alt="" />
@@ -109,7 +119,7 @@ const CheckoutContainer = () => {
                   .
                 </label>
               </div>
-              <div className="w-56 mt-2">
+              <div className="md:w-56 w-full mt-2">
                 <Button iconSrc={lock} buttonText="Confirm & Pay" />
               </div>
             </div>
