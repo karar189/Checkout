@@ -10,8 +10,8 @@ const PaymentPage = () => {
   return (
     <>
       <PaymentContainer />
-      {/* <CheckoutContainer />
-      <FAQContainer /> */}
+      <CheckoutContainer />
+      <FAQContainer />
     </>
   );
 };

@@ -9,3 +9,4 @@ export { default as BorderBox } from "./BorderBox";
 export { default as UserForm } from "./UserForm";
 export { default as RightConfirmPayment } from "./subComponents/RightConfirmPayment";
 export { default as RightDetails } from "./subComponents/RightDetails";
+export { default as RightSlider } from "./subComponents/RightSlider";

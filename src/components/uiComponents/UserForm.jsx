@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../styles/style";
-import {
-  Button,
-  Footer,
-  Header,
-  Card,
-  InputField,
-  SelectField,
-  BorderBox,
-} from "../uiComponents/index";
+import { InputField, SelectField } from "../uiComponents/index";
 import countryOptions from "../../utils/mapdata";
 import selectOptions from "../../utils/dataDummy";
 

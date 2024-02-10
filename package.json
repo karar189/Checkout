@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
     "countries-and-timezones": "^3.6.0",
     "country-calling-code": "^0.0.3",
     "country-calling-codes": "^1.1.2",
+    "i": "^0.3.7",
+    "npm": "^10.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

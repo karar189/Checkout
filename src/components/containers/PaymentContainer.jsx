@@ -3,9 +3,9 @@ import styles from "../../styles/style";
 import {
   BorderBox,
   UserForm,
-  Button,
   RightConfirmPayment,
   RightDetails,
+  RightSlider,
 } from "../uiComponents/index";
 
 const PaymentContainer = () => {
@@ -31,7 +31,9 @@ const PaymentContainer = () => {
         </div>
         <div className="right w-1/3">
           <BorderBox>
-            <div className="ImageContainer"></div>
+            <div className="ImageContainer">
+              <RightSlider />
+            </div>
             <div className="details">
               <RightDetails />
             </div>
