@@ -1,5 +1,6 @@
 const styles = {
-  heading1: " md:text-[57px] font-medium  text-gray-900 font-roboto-serif",
+  heading1:
+    " md:text-[57px] text-[35px] font-medium  text-gray-900 font-roboto-serif",
   heading2:
     "text-3xl md:text-4xl font-semibold leading-snug text-gray-800 font-roboto-serif",
   subheading: "text-[24px] font-semibold text-[#1C2024] font-open-sans",

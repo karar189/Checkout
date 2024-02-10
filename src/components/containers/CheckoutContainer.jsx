@@ -10,6 +10,7 @@ import lock from "../../assets/Lock.png";
 import gpay from "../../assets/gpay.png";
 import radio2 from "../../assets/radio2.png";
 import info3 from "../../assets/info3.png";
+import piggy from "../../assets/piggy.png";
 
 const CheckoutContainer = () => {
   const [formData, setFormData] = useState({
@@ -179,11 +180,25 @@ const CheckoutContainer = () => {
             </div>
           </BorderBox>
           <div className={`mt-20 md:mb-24 mb-10`}>
+            <div className="md:hidden block">
+              <div
+                className={`${styles.paragraph4} font-bold flex items-center my-6 `}
+              >
+                <span className="mr-1">
+                  <img src={piggy} alt="" />
+                </span>
+                <span className="text-[#299764]">You saved $300</span>
+              </div>
+            </div>
             <p className={`${styles.subheading} mb-4`}>Total Payable: $XXX</p>
             <BorderBox className={`border-[#D3D4DB]`}>
               <div className="flex flex-between">
-                <div className="mr-2 mt-1">
-                  <img src={info3} alt="img" />
+                <div className="md:mr-2 md:mt-1 mt-1">
+                  <img
+                    src={info3}
+                    className="md:w-auto w-24 pr-2 md:pr-0 "
+                    alt="img"
+                  />
                 </div>
                 <div className="">
                   <p className={`${styles.paragraph}`}>
