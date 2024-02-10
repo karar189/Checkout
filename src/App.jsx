@@ -5,15 +5,11 @@ import { Footer, Header } from "./components/uiComponents";
 const App = () => {
   return (
     <>
-      <div className=" ">
-        {" "}
-        <Header />
-        <div className="w-[1500px]">
-          {" "}
-          <PaymentPage />
-        </div>
-        <Footer />
+      <Header />
+      <div className="md:w-[1500px]">
+        <PaymentPage />
       </div>
+      <Footer />
     </>
   );
 };
