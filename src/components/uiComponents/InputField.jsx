@@ -10,7 +10,7 @@ const InputField = ({
 }) => {
   return (
     <div
-      className={`flex items-center border border-slate-300 w-full rounded-lg overflow-hidden 
+      className={`flex items-center border border-slate-300 w-full rounded-xl overflow-hidden 
       ${icon ? "pl-2" : "px-4 "} ${className}`}
     >
       {icon && <div className="input-icon p-2">{icon}</div>}

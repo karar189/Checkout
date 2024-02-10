@@ -12,11 +12,11 @@ const SelectField = ({
     <div className={`relative inline-block w-full text-gray-700 ${className}`}>
       {icon && (
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          {icon}
+          <img src={icon} alt="" />
         </div>
       )}
       <select
-        className="w-full py-3 pl-4 pr-8 border border-slate-300 rounded-lg overflow-hidden appearance-none focus:border-indigo-600 focus:outline-none"
+        className="w-full py-3 pl-10 border border-slate-300 rounded-lg overflow-hidden appearance-none focus:border-indigo-600 focus:outline-none"
         onChange={onChange}
         value={value}
       >

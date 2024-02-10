@@ -1,24 +1,19 @@
 import React from "react";
 import { Button } from "../index";
+import styles from "../../../styles/style";
+import info from "../../../assets/info2.png";
+import lock from "../../../assets/Lock.png";
 
 const RightConfirmPayment = () => {
   return (
     <div className="space-y-2">
-      <p className="text-sm text-gray-600">
+      <u className={`${styles.paragraph4} font-semibold flex`}>
         You will be charged in AED{" "}
-        <span className="inline-flex items-center">
-          <img
-            src="/path-to-info-icon.png"
-            alt="icon"
-            className="ml-1 w-4 h-4"
-          />
+        <span className="mt-[1.5px] ml-1">
+          <img src={info} alt="icon" className="" />
         </span>
-      </p>
-      <div className="text-xs text-gray-500">
-        <span className="font-semibold text-green-500">
-          You saved <span className="text-green-600">price</span>
-        </span>
-      </div>
+      </u>
+
       <div className="flex items-start">
         <input
           type="checkbox"
@@ -46,11 +41,7 @@ const RightConfirmPayment = () => {
           .
         </label>
       </div>
-      <Button
-        iconSrc=""
-        buttonText="Confirm & Pay"
-        className="bg-black text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 "
-      />
+      <Button iconSrc={lock} buttonText="Confirm & Pay" className=" " />
     </div>
   );
 };

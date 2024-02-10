@@ -1,13 +1,13 @@
 const styles = {
-  heading1:
-    "text-4xl md:text-5xl font-semibold leading-tight text-gray-900 font-roboto-serif",
+  heading1: " md:text-[57px] font-medium  text-gray-900 font-roboto-serif",
   heading2:
     "text-3xl md:text-4xl font-semibold leading-snug text-gray-800 font-roboto-serif",
-  subheading: "text-xl md:text-2xl font-medium text-gray-700 font-open-sans",
-  paragraph:
-    "text-sm md:text-base font-normal text-gray-600 leading-relaxed font-open-sans",
-  paragraph2:
-    "text-sm md:text-base font-light text-gray-600 leading-relaxed font-open-sans",
+  subheading: "text-[24px] font-semibold text-[#1C2024] font-open-sans",
+  subheading2: "text-[16px] font-regular text-[#60646C] font-open-sans",
+  paragraph: "text-[14px] font-bold text-[#1C2024]  font-open-sans",
+  paragraph2: "text-[14px] font-regular text-[#60646C]  font-open-sans",
+  paragraph3: "text-[12px] font-bold text-[#60646C]  font-open-sans",
+  paragraph4: "text-[12px] font-regular text-[#60646C]  font-open-sans",
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-start items-start",
@@ -15,7 +15,7 @@ const styles = {
   flexBetween: "flex justify-between",
 
   paddingX: "px-4 sm:px-8 md:px-16",
-  paddingY: "py-4 sm:py-8 md:py-16",
+  paddingY: "py-4 sm:py-4 md:py-16",
   paddingL: "pl-4 sm:pl-8 md:pl-16",
   padding: "p-4 sm:p-8 md:p-16",
 

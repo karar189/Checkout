@@ -3,6 +3,7 @@ import styles from "../../styles/style";
 import { InputField, SelectField } from "../uiComponents/index";
 import countryOptions from "../../utils/mapdata";
 import selectOptions from "../../utils/dataDummy";
+import globe from "../../assets/sec1_globe.png";
 
 const UserForm = () => {
   const [phoneNumber, setPhoneNumber] = React.useState("");
@@ -15,7 +16,7 @@ const UserForm = () => {
       <div className={`${styles.marginY} upperDetail`}>
         <div className={`my-8`}>
           <p className={`${styles.subheading}`}>Enter your details</p>
-          <p className={`${styles.paragraph2}`}>
+          <p className={`${styles.subheading2}`}>
             We'll be sending your tickets to the details below. Booking for a
             friend? Add their details.
           </p>
@@ -25,7 +26,7 @@ const UserForm = () => {
           <div className={`${styles.flexBetween} my-2`}>
             <SelectField
               placeholder="Select Country Code"
-              icon={""}
+              icon={globe}
               options={countryOptions}
               //   onChange={handleSelectChange}
               //   value={selectedValue}
@@ -48,7 +49,7 @@ const UserForm = () => {
       <div className={`${styles.marginY} bottomDetail`}>
         <div className={`my-8`}>
           <p className={`${styles.subheading}`}>Additional information</p>
-          <p className={`${styles.paragraph2} `}>
+          <p className={`${styles.subheading2} `}>
             We need a few more details to complete your reservation.
           </p>
         </div>

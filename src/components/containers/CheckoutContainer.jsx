@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "../../styles/style";
-import {
-  BorderBox,
-  InputField,
-  SelectField,
-  Button,
-} from "../uiComponents/index";
+import { BorderBox, InputField, Button } from "../uiComponents/index";
 
 const CheckoutContainer = () => {
   return (
